@@ -16,8 +16,17 @@ export default function initModal() {
       }
     }
 
+    function fecharModalNoESC(event) {
+      event.preventDefault();
+
+      if (event.key === "Escape") {
+        containerModal.classList.remove("ativo");
+      }
+    }
+
     botaoAbrir.addEventListener("click", toggleModal);
     botaoFechar.addEventListener("click", toggleModal);
     containerModal.addEventListener("click", cliqueForaModal);
+    document.addEventListener("keydown", fecharModalNoESC);
   }
 }
