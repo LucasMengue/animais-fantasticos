@@ -1,5 +1,5 @@
 export default function initSmoothScroll() {
-  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
+  const linksInternos = document.querySelectorAll("[data-menu='suave'] a[href^='#']");
 
   function scrollToSection(event) {
     event.preventDefault();
